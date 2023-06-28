@@ -1,0 +1,4 @@
+<launch>
+      <node pkg="learning_tf2" type="pub_pose" name="pub_pose_stamped"/>
+      <node name="rviz" pkg="rviz" type="rviz" args="-d $(find learning_tf2)/rviz/check_tf.rviz"/>
+</launch>

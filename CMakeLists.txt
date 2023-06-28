@@ -219,6 +219,7 @@ target_link_libraries(turtle_tf2_broadcaster
 ## Mark other files for installation (e.g. launch and bag files, etc.)
 install(FILES
  start_demo.launch
+ custom_tf.launch
  # myfile2
  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
 )
@@ -232,9 +233,6 @@ add_executable(frame_tf2_broadcaster src/frame_tf2_broadcaster.cpp)
 target_link_libraries(frame_tf2_broadcaster
  ${catkin_LIBRARIES}
 )
-
-add_executable(sub_test src/sub_test.cpp)
-target_link_libraries(sub_test ${catkin_LIBRARIES})
 
 add_executable(pub_pose src/pub_pose_stamped.cpp)
 target_link_libraries(pub_pose ${catkin_LIBRARIES})
